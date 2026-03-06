@@ -1,211 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wind Turbine Blade Design, Optimization, and Testing project by Lola Anderson">
+    <title>Wind Turbine Blade | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <div class="project-section">
-      <h1>Wind Turbine Blade Design, Optimization, and Testing</h1>
-      <div class="proj-header-image">
-        <img src="project_photos\Blade_design_project\IMG_6020.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 1:</b> 3D Printed Blade inside of wind turbine testing setup</div>
-      </div>
-      <div class="proj-text"> This was a group project for a fluid dynamics lab course. 
-        We were tasked with designing a wind turbine blade optimized for 
-        maximum power production at a specific target wind speed. <br> <br>
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>Wind Turbine Blade Design, Optimization, and Testing</h1>
+            <div class="proj-header-image">
+                <img src="project_photos/Blade_design_project/IMG_6020.jpg"
+                     alt="3D Printed Blade in wind turbine testing setup"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> 3D Printed Blade inside of wind turbine testing setup
+                </p>
+            </div>
+            <div class="proj-text">
+                This was a group project for a fluid dynamics lab course.
+                We were tasked with designing a wind turbine blade optimized for
+                maximum power production at a specific target wind speed.<br><br>
 
-        Given that the wind experienced by the turbine would not be 
-        constant in a natural environment, we assumed that velocity profile would
-        vary in speed according to a Weibull distribution ranging from 0 m/s 
-        to 8 m/s. To maximize total average power distribution, we identified 
-        the speed that was both most likely to occur and capable of producing the highest 
-        theoretical power for a given turbine size. To do this, we multiplyied the 
-        theoretical power output, given by equation 1, by the probability of each wind speed occurring. This 
-        analysis indicated that the optimal design wind speed was 5.4 m/s.  <br> <br>
+                Given that the wind experienced by the turbine would not be
+                constant in a natural environment, we assumed that velocity profile would
+                vary in speed according to a Weibull distribution ranging from 0 m/s
+                to 8 m/s. To maximize total average power distribution, we identified
+                the speed that was both most likely to occur and capable of producing the highest
+                theoretical power for a given turbine size. To do this, we multiplyied the
+                theoretical power output, given by equation 1, by the probability of each wind speed occurring. This
+                analysis indicated that the optimal design wind speed was 5.4 m/s.<br><br>
 
-        We then performed finite element analysis (FEA) on the initial blade geometry to 
-        evaluate yield stresses and deflection magnitudes at the blade tip. Two loading 
-        scenarios were analyzed: one under optimal design conditions and another under 
-        maximum possible operating conditions. Our analysis revealed that the initial blade 
-        design experienced significant deflection at the tip, even under optimal conditions. 
-        To address this, we scaled the chord length using a function that increased chord 
-        more significantly toward the tip than at the base, resulting in a fatter, more 
-        rectangular blade shape.
+                We then performed finite element analysis (FEA) on the initial blade geometry to
+                evaluate yield stresses and deflection magnitudes at the blade tip. Two loading
+                scenarios were analyzed: one under optimal design conditions and another under
+                maximum possible operating conditions. Our analysis revealed that the initial blade
+                design experienced significant deflection at the tip, even under optimal conditions.
+                To address this, we scaled the chord length using a function that increased chord
+                more significantly toward the tip than at the base, resulting in a fatter, more
+                rectangular blade shape.
 
-        For wind tunnel testing, we selected a low wind speed and applied a braking torque 
-        to achieve a rotation rate as close to 2000 RPM as possible. We then incrementally 
-        increased the braking torque until the blade stalled. Once stall occurred, we 
-        incremented the wind speed in steps of approximately 1 m/s, repeating this process 
-        as many times as the allotted testing time permitted. 
+                For wind tunnel testing, we selected a low wind speed and applied a braking torque
+                to achieve a rotation rate as close to 2000 RPM as possible. We then incrementally
+                increased the braking torque until the blade stalled. Once stall occurred, we
+                incremented the wind speed in steps of approximately 1 m/s, repeating this process
+                as many times as the allotted testing time permitted.
 
-        Finally, we compared our results to our design conditions by plotting power output 
-        versus RPM and power output versus wind speed. While our blade performed optimally 
-        under the designed conditions, some technical limitations encountered during the lab 
-        testing prevented us from conclusively verifying this outcome. These limitations are 
-        explored in greater detail in this report.
-        </div>
-    </div>
-    <div class="proj-header-image">
-        <img src="project_photos\Blade_design_project\power_equation.jpg"
-        style="width:300px;">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Equation 1:</b> Theoretical Power Output</div>
-    </div>
-    <div class="proj-header-image">
-        <img src="project_photos\Blade_design_project\expected_power-curve.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 2:</b> Expected Power Output</div>
-    </div>
+                Finally, we compared our results to our design conditions by plotting power output
+                versus RPM and power output versus wind speed. While our blade performed optimally
+                under the designed conditions, some technical limitations encountered during the lab
+                testing prevented us from conclusively verifying this outcome. These limitations are
+                explored in greater detail in this report.
+            </div>
+        </section>
 
-    <div class="project-section">
-      <h3 style="font-size:27px;">Geometry and Optimization</h3>
-      <p>
-        <div class="proj-text"> Next, we selected an airfoil for our blade design. We looked for 
-        an airfoil with a high lift-to-drag ratio (Cl/Cd). We identified the SG6043 airfoil, 
-        which demonstrated an impressive Cl/Cd ratio of 65. Then, to determine the optimal 
-        rotational rate for our wind speed of 5.4 m/s, a MATLAB script with power calculations which included nonideal contributions.
-        Inputting the SG6043 airfoil properties and testing various rotation rates led us to 
-        select an optimal rotation rate of 1250 RPM. For our geometry, we started by ignoring the
-        blades 
-      </div>
-      </p>
-      <div class="proj-row">
-        <div class="proj-column-two">
-          <img src="project_photos\Blade_design_project\blade_geom_pitch.jpg"/>
-        </div>
-        <div class="proj-column-two">
-          <img src="project_photos\Blade_design_project\blade_geom_chord.jpg"/>
-        </div>
-      </div>
-      <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-        <b>Figure 3 and 4:</b> Pitch Angle (left) and Chord (right) as a function of turbine radius for our initial and 
-        final geometry iterations.        
-      </div>
-    </div>
-
-    <div class="project-section">
-      <h3 style="font-size:27px;">Ansys Results</h3>
-      <p>
-        <div class="proj-row">
-          <div class="proj-column-two">
-            <img src="project_photos\Blade_design_project\deflection_ansys.jpg"/>
-          </div>
-          <div class="proj-column-two">
-            <img src="project_photos\Blade_design_project\stress_ansys.jpg"/>
-          </div>
-        </div>
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-          <b>Figure 5 and 6:</b> Deflection (left) and stress (right) of turbine blade under aerodynamic loads.        
-        </div>
-        <div class="proj-text">Our design met requirements for deflection and stress when we increased our chord 
-          throughout the blade length. This increase the moment of inertia of the blade cross section by impacting 
-          airfoil thickness.
-        </div>
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h3 style="font-size:27px;">Wind Turbine Data</h3>
-      <p>
         <div class="proj-header-image">
-          <img src="project_photos\Blade_design_project\wind_turbine_data.jpg"
-          style="width:var(--proj-image-size);">
-          <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-            <b>Figure 7:</b> Rotational Rate (RPM) vs. Coefficient of Power for Wind Velocity from Wind Tunnel Calibration
-            Curve</div>
+            <img src="project_photos/Blade_design_project/power_equation.jpg"
+                 alt="Theoretical Power Output Equation"
+                 style="width: 300px;">
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Equation 1:</strong> Theoretical Power Output
+            </p>
         </div>
-        <div class="proj-text">This figure shows that the highest power coefficient of .476 is found at 1400 RPM at 7.4 m/s. 
-          This is the highest wind speed we tested our design at due to time constaints and this suggests that our optimal 
-          wind speed for our design is at or above 7.4 m/s. This contrasted our expectation, because we designed our blade 
-          to operate in 5.4 m/s winds. This discreancy could be due to assumptions we made about the type of flow we are 
-          working with. We slightly adjusted our calculations in order to account for non ideal effects such as the rotational 
-          velocity of the wake, but the impact of these effects seem to be higher than we accounted for.
-        </div>
-      </p>
-    </div>
 
-    <!-- REPORT SECTION -->
-    <h2 id="Resume">Report</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="project_photos\Blade_design_project\MAE 4272 - Wind Turbine Final Report.pdf" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Report</span>
+        <div class="proj-header-image">
+            <img src="project_photos/Blade_design_project/expected_power-curve.jpg"
+                 alt="Expected Power Output Graph"
+                 style="width: var(--project-image-size);">
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 2:</strong> Expected Power Output
+            </p>
+        </div>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Geometry and Optimization</h3>
+            <div class="proj-text">
+                Next, we selected an airfoil for our blade design. We looked for
+                an airfoil with a high lift-to-drag ratio (Cl/Cd). We identified the SG6043 airfoil,
+                which demonstrated an impressive Cl/Cd ratio of 65. Then, to determine the optimal
+                rotational rate for our wind speed of 5.4 m/s, a MATLAB script with power calculations which included nonideal contributions.
+                Inputting the SG6043 airfoil properties and testing various rotation rates led us to
+                select an optimal rotation rate of 1250 RPM. For our geometry, we started by ignoring the
+                blades
+            </div>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/Blade_design_project/blade_geom_pitch.jpg" alt="Pitch Angle vs Radius">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/Blade_design_project/blade_geom_chord.jpg" alt="Chord vs Radius">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 3 and 4:</strong> Pitch Angle (left) and Chord (right) as a function of turbine radius for our initial and
+                final geometry iterations.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Ansys Results</h3>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/Blade_design_project/deflection_ansys.jpg" alt="Deflection Analysis">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/Blade_design_project/stress_ansys.jpg" alt="Stress Analysis">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 5 and 6:</strong> Deflection (left) and stress (right) of turbine blade under aerodynamic loads.
+            </p>
+            <div class="proj-text">
+                Our design met requirements for deflection and stress when we increased our chord
+                throughout the blade length. This increase the moment of inertia of the blade cross section by impacting
+                airfoil thickness.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Wind Turbine Data</h3>
+            <div class="proj-header-image">
+                <img src="project_photos/Blade_design_project/wind_turbine_data.jpg"
+                     alt="Wind Turbine Test Data"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 7:</strong> Rotational Rate (RPM) vs. Coefficient of Power for Wind Velocity from Wind Tunnel Calibration
+                    Curve
+                </p>
+            </div>
+            <div class="proj-text">
+                This figure shows that the highest power coefficient of .476 is found at 1400 RPM at 7.4 m/s.
+                This is the highest wind speed we tested our design at due to time constaints and this suggests that our optimal
+                wind speed for our design is at or above 7.4 m/s. This contrasted our expectation, because we designed our blade
+                to operate in 5.4 m/s winds. This discreancy could be due to assumptions we made about the type of flow we are
+                working with. We slightly adjusted our calculations in order to account for non ideal effects such as the rotational
+                velocity of the wake, but the impact of these effects seem to be higher than we accounted for.
+            </div>
+        </section>
+
+        <!-- Report Section -->
+        <section class="project-section">
+            <h2>Report</h2>
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="project_photos/Blade_design_project/MAE 4272 - Wind Turbine Final Report.pdf" download>
+                    <span class="tag-cloud">Download Report</span>
+                </a>
+            </div>
+            <object class="pdf"
+                    data="project_photos/Blade_design_project/MAE 4272 - Wind Turbine Final Report.pdf"
+                    type="application/pdf"
+                    width="800"
+                    height="500">
+                <p>Unable to display PDF. <a href="project_photos/Blade_design_project/MAE 4272 - Wind Turbine Final Report.pdf">Download</a> instead.</p>
+            </object>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <object class="pdf" 
-            data="project_photos\Blade_design_project\MAE 4272 - Wind Turbine Final Report.pdf"
-            width="800"
-            height="500">
-    </object>
-    </div>
-    
-    
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/lola-anderson">
-        <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-      <a href="mailto:lra57@cornell.edu">
-        <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-      <p style="color: #95AAB6;">
-        2025 &copy by Lola Anderson
-      </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,212 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Printmaking portfolio by Lola Anderson - Risograph, Cyanotype, Lithograph, and more">
+    <title>Printmaking | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <div class="project-section">
-      <h1>PRINTS</h1>
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>PRINTS</h1>
 
-    <div class="main" id="Projects">
-        <hr class="w3-opacity"/>
-      
-      <!-- COLUMN 1 -->
-        <div class="row-proj">
-          <div class="portfolio_col">
-            <div class="container">
-                <img src="project_photos\print_making\IMG_7334.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Talking</i><br>Risograph Poster, 2025</div>
-                </div>
-            </div>
-  
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6386.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Tree in Book</i><br>Drypoint Etching on Handmade Paper, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_4805.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Tree</i><br>Drypoint Etching on Handmade Paper, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6347.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Hall of Moss</i><br>Woodblock on Handmade Paper, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6354.jpg"
-            alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Hall of Moss</i><br>Woodblock on Handmade Paper, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6084.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Mossy Stump</i><br>Plate Lithograph, 2024</div>
-                </div>
-            </div>
-          </div>
-        
-      <!-- COLUMN 2 -->
-          <div class="portfolio_col">
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6790.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                <div class="text"><i>Buissiness Card</i><br>Risograph, 2025</div>
-                </div>
-            </div>
+            <div class="main" id="Projects">
+                <hr>
 
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6951.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>The Resolution Breaker</i><br>Risograph, 2025</div>
-                </div>
-            </div>
+                <div class="row-proj">
+                    <!-- Column 1 -->
+                    <div class="portfolio_col">
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_7334.jpg" alt="Talking - Risograph Poster" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Talking</em><br>Risograph Poster, 2025</div>
+                            </div>
+                        </div>
 
-            <div class="container">
-                <img src="project_photos\print_making\Cyanotype08.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                <div class="text"><i>Two Halves</i><br>Cyanotype on Handmade Paper, 2024</div>
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6386.jpg" alt="Tree in Book - Drypoint Etching" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Tree in Book</em><br>Drypoint Etching on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_4805.jpg" alt="Tree - Drypoint Etching" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Tree</em><br>Drypoint Etching on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6347.jpg" alt="Hall of Moss - Woodblock" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Hall of Moss</em><br>Woodblock on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6354.jpg" alt="Hall of Moss variant - Woodblock" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Hall of Moss</em><br>Woodblock on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6084.jpg" alt="Mossy Stump - Plate Lithograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Mossy Stump</em><br>Plate Lithograph, 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="portfolio_col">
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6790.jpg" alt="Business Card - Risograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Business Card</em><br>Risograph, 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6951.jpg" alt="The Resolution Breaker - Risograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>The Resolution Breaker</em><br>Risograph, 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/Cyanotype08.jpg" alt="Two Halves - Cyanotype" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Two Halves</em><br>Cyanotype on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/CyanotypeCritque.jpg" alt="Cyanotype Display" class="image">
+                            <div class="middle">
+                                <div class="text">Cyanotype Display, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_5604.jpg" alt="Pre-processed Cyanotypes" class="image">
+                            <div class="middle">
+                                <div class="text">Pre-processed Cyanotypes, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6375.jpg" alt="Lakehouse - Cyanotype" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Lakehouse</em><br>Cyanotype on Handmade Paper, 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="portfolio_col">
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_7566.jpg" alt="Googley Eye Notebooks - Risograph Book" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Googley Eye Notebooks</em><br>Risograph Book with Hot Glue Binding, 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_7575.jpg" alt="DC - Risograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>DC</em><br>Risograph, 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_6793.jpg" alt="Business Card variant - Risograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Business Card</em><br>Risograph, 2025</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/Screenprint02.jpg" alt="Cliff Face - Screenprint" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Cliff Face</em><br>Screenprint, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_5664.jpg" alt="Jellyfish - Stone Lithograph" class="image">
+                            <div class="middle">
+                                <div class="text"><em>Jellyfish</em><br>Stone Lithograph, 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <img src="project_photos/print_making/IMG_5586.jpg" alt="Lithograph Stone" class="image">
+                            <div class="middle">
+                                <div class="text">Lithograph Stone, 2024</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="container">
-                <img src="project_photos\print_making\CyanotypeCritque.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text">Cyanotype Display, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_5604.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                <div class="text">Pre-processed Cyanotypes, 2024</div>
-                </div>
-            </div>
-  
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6375.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Lakehouse</i><br>Cyanotype on Handmade Paper,</div>
-                </div>
-            </div>
-          </div>
-      
-      <!-- COLUMN 3 -->
-          <div class="portfolio_col">
-            <div class="container">
-                <img src="project_photos\print_making\IMG_7566.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Googley Eye Notebooks</i><br>Risograph Book with Hot Glue Binding, 2025</div>
-                </div>
-            </div>
-  
-            <div class="container">
-                <img src="project_photos\print_making\IMG_7575.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>DC</i><br>Risograph, 2025</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_6793.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Buissiness Card</i><br>Risograph, 2025</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\Screenprint02.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Cliff Face</i><br>Screenprint, 2024</div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <img src="project_photos\print_making\IMG_5664.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text"><i>Jellyfish</i><br>Stone Lithograph, 2024</div>
-                </div>
-            </div>
-            <div class="container">
-                <img src="project_photos\print_making\IMG_5586.jpg" alt="Avatar" class="image">
-                <div class="middle">
-                  <div class="text">Lithograph Stone, 2024</div>
-                </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-    
-    
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/lola-anderson">
-        <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-      <a href="mailto:lra57@cornell.edu">
-        <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-      <p style="color: #95AAB6;">
-        2025 &copy by Lola Anderson
-      </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
+        </a>
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

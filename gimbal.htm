@@ -1,116 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="2.5 Axis Camera Gimbal - Design and Development project by Lola Anderson">
+    <title>Camera Gimbal | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <div class="project-section">
-      <h1>Design and Development of 2.5 Axis Camera Gimbal</h1>
-      <div class="proj-header-image">
-        <img src="project_photos/camtracker.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 1:</b> CAD Model of 2.5 Axis Camera Gimbal</div>
-      </div>
-      <div class="proj-text"> For this project I designed a 2.5-axis camera gimbal designed for automatic overhead tracking of 
-        CUAir's planes. This project was neccessary in order to get smooth consistent footage for our competition videos. 
-        This project is currently in the manufacturing and testing stage.
-      </div>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>Design and Development of 2.5 Axis Camera Gimbal</h1>
+            <div class="proj-header-image">
+                <img src="project_photos/camtracker.jpg"
+                     alt="CAD Model of 2.5 Axis Camera Gimbal"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> CAD Model of 2.5 Axis Camera Gimbal
+                </p>
+            </div>
+            <div class="proj-text">
+                For this project I designed a 2.5-axis camera gimbal designed for automatic overhead tracking of
+                CUAir's planes. This project was neccessary in order to get smooth consistent footage for our competition videos.
+                This project is currently in the manufacturing and testing stage.
+            </div>
+        </section>
 
-    <!-- REPORT SECTION -->
-    <h2 id="Resume">Critical Design Reveiw</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="project_photos\CameraTracker\Camera_Tracker_CDR_Website.pdf" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Report</span>
+        <!-- Report Section -->
+        <section class="project-section">
+            <h2>Critical Design Review</h2>
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="project_photos/CameraTracker/Camera_Tracker_CDR_Website.pdf" download>
+                    <span class="tag-cloud">Download Report</span>
+                </a>
+            </div>
+            <object class="pdf"
+                    data="project_photos/CameraTracker/Camera_Tracker_CDR_Webiste.pdf"
+                    type="application/pdf"
+                    height="700">
+                <p>Unable to display PDF. <a href="project_photos/CameraTracker/Camera_Tracker_CDR_Website.pdf">Download</a> instead.</p>
+            </object>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Recent Updates</h3>
+            <div class="proj-text">
+                Since the CDR manufacturing progress was made:
+                <ul>
+                    <li>Send Cut Send parts arrived.</li>
+                    <li>Initial Fit check and assembly completed, reprinting and adjusting tolerances for certain 3D printed parts.</li>
+                    <li>Beginning to integrate with electrical and imaging subteams.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <object class="pdf" 
-            data="project_photos\CameraTracker\Camera_Tracker_CDR_Webiste.pdf"
- 
-            height=700vh>
-    </object>
-    </div>
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
 
-    <div class="project-section">
-      <h3 style="font-size:27px;">Recent Updates</h3>
-      <p>
-        <div class="proj-text"> Since the CDR manufacturing progress was made:
-        
-        <ul>
-          <li>Send Cut Send parts arrived.</li>
-          <li>Initial Fit check and assembly completed, reprinting and adjusting tolerances for certain 3D printed parts.</li>
-          <li>Beginning to integrate with electrical and imaging subteams.</li>
-       </ul> 
-      </div>
-      </p>
-    </div>
-    
-    
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/lola-anderson">
-        <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-      <a href="mailto:lra57@cornell.edu">
-        <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-      <p style="color: #95AAB6;">
-        2025 &copy by Lola Anderson
-      </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+    <script src="js/main.js"></script>
 </body>
 </html>

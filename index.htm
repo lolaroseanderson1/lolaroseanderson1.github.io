@@ -1,54 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lola Anderson - Mechanical Engineering student at Cornell University. Portfolio showcasing engineering projects and creative work.">
+    <title>Lola Anderson | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
-    
-        <!-- ABOUT ME SECTION -->
-    <div class="row">
-        <div class="col1"> 
-            <img src="project_photos/artemis-flying-full.png" 
-            style="height: var(--plane-height);">
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="row">
+        <div class="col1">
+            <img src="project_photos/artemis-flying-full.png"
+                 alt="Artemis aircraft in flight"
+                 style="height: var(--plane-height);">
         </div>
         <div class="col2">
-        I am a student in my Senior year at Cornell University, 
-        starting my career in Mechanical Engineering. Past internships 
-        include Caterpillar, where I got to help extend diesel engine 
-        lifecycles, and SpaceX where designed multiple parts for Falcon 9 
-        Payload Integration. While at Cornell, I am a member of CUAir, 
-        a project team where I was a member of Integration and Testing 
-        Operations subteam. I hope you enjoy checking out some of the projects 
-        I have worked on and some of my other interests!
+            I am a student in my Senior year at Cornell University,
+            starting my career in Mechanical Engineering. Past internships
+            include Caterpillar, where I got to help extend diesel engine
+            lifecycles, and SpaceX where designed multiple parts for Falcon 9
+            Payload Integration. While at Cornell, I am a member of CUAir,
+            a project team where I was a member of Integration and Testing
+            Operations subteam. I hope you enjoy checking out some of the projects
+            I have worked on and some of my other interests!
         </div>
-    </div>
-    
-    <div class="main" id="content">
+    </section>
 
-        <!-- SKILLS SECTION -->
+    <!-- Skills Section -->
+    <section class="main" id="content">
         <h2 id="Skills">SKILLS</h2>
         <span class="tag-cloud">NX</span>
         <span class="tag-cloud">Solidworks</span>
@@ -56,162 +59,137 @@
         <span class="tag-cloud">NASTRAN</span>
         <span class="tag-cloud">Matlab</span>
         <span class="tag-cloud">Python</span>
-    
-        <!-- NEXT BUTTON -->
+
         <a href="#Projects">
             <p style="text-align: center;">
-                <img id="next" src="icons_and_such\icons8-chevron-down-white.png" 
-                alt="Next" style="height:5vh; width:5vh">
+                <img id="next"
+                     src="icons_and_such/icons8-chevron-down-white.png"
+                     alt="Scroll to projects"
+                     style="height: 5vh; width: 5vh;">
             </p>
         </a>
-    </div>
-    
-    <!-- PROJECTS SECTION -->
-    <div class="main" id="Projects">
-      <h2>PROJECTS</h2>
-      <hr class="w3-opacity"/>
-    
-    <!-- COLUMN 1 -->
-      <div class="row-proj">
-        <div class="portfolio_col">
-          <a href="gimbal.htm">
-            <div class="container">
-              <img src="project_photos\camtracker.jpg" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">2.5 Axis Gimbal</div>
-              </div>
-            </div>
-          </a>
+    </section>
 
-          <a href="electrical-bay.html">
-            <div class="container">
-              <img src="project_photos\ebay\DSC05755.JPG" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">Custom VTOL Aircraft Electrical Bay</div>
-              </div>
-            </div>
-          </a>
+    <!-- Projects Section -->
+    <section class="main" id="Projects">
+        <h2>PROJECTS</h2>
+        <hr>
 
+        <div class="row-proj">
+            <!-- Column 1 (Left) -->
+            <div class="portfolio_col">
+                <a href="dragonfly.html">
+                    <div class="container">
+                        <img src="project_photos/Dragonfly/IMG_1763.JPG" alt="Dragonfly Project" class="image">
+                        <div class="middle">
+                            <div class="text">Dragonfly Project</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="electrical-bay.html">
+                    <div class="container">
+                        <img src="project_photos/ebay/DSC05755.JPG" alt="VTOL Aircraft Electrical Bay" class="image">
+                        <div class="middle">
+                            <div class="text">Custom VTOL Aircraft Electrical Bay</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blade-design.html">
+                    <div class="container">
+                        <img src="project_photos/Blade_design_project/stress_ansys.jpg" alt="Wind Turbine Blade Analysis" class="image">
+                        <div class="middle">
+                            <div class="text">Wind Turbine Blade Design, Optimization, and Testing</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 2 (Middle) -->
+            <div class="portfolio_col">
+                <a href="gimbal.htm">
+                    <div class="container">
+                        <img src="project_photos/camtracker.jpg" alt="2.5 Axis Camera Gimbal" class="image">
+                        <div class="middle">
+                            <div class="text">2.5 Axis Gimbal</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="color-seperator.html">
+                    <div class="container">
+                        <img src="project_photos/color_seperator/color_seperator.jpg" alt="Color Separator Tool" class="image">
+                        <div class="middle">
+                            <div class="text">Image Color Seperator for Risograph Printmaking</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="fea-wing-des-page.html">
+                    <div class="container">
+                        <img src="project_photos/FEAWINGDES.jpg" alt="FEA Wing Design" class="image">
+                        <div class="middle">
+                            <div class="text">FEA on Plane Wing using ANSYS Optislang</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column 3 (Right) -->
+            <div class="portfolio_col">
+                <a href="dynamic-sim.html">
+                    <div class="container">
+                        <img src="project_photos/IDGIMBALMODEL.jpg" alt="Gimbal Dynamic Simulation" class="image">
+                        <div class="middle">
+                            <div class="text">Dynamic Simulation of Free Gimbal</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="print-making.html">
+                    <div class="container">
+                        <img src="project_photos/print_making/IMG_6790.jpg" alt="Printmaking Portfolio" class="image">
+                        <div class="middle">
+                            <div class="text">Printmaking</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="carbon-fiber-fuse.html">
+                    <div class="container">
+                        <img src="project_photos/fusemold2.png" alt="Carbon Fiber Fuselage Mold" class="image">
+                        <div class="middle">
+                            <div class="text">Carbon Fiber Fuselage Mold</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-      
-    <!-- COLUMN 2 -->
-        <div class="portfolio_col">
-          <a href="dynamic-sim.html">
-            <div class="container">
-              <img src="project_photos\IDGIMBALMODEL.jpg" alt="Avatar" class="image">
-              <div class="middle">
-              <div class="text">Dynamic Simulation of Free Gimbal</div>
-              </div>
-            </div>
-          </a>
 
-          <a href="blade-design.html">
-            <div class="container">
-              <img src="project_photos\Blade_design_project\stress_ansys.jpg" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">Wind Turbine Blade Design, Optimization, and Testing</div>
-              </div>
-            </div>
-          </a>
-
-          <a href="color-seperator.html">
-            <div class="container">
-              <img src="project_photos\color_seperator\color_seperator.jpg" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">Image Color Seperator for Risograph Printmaking</div>
-              </div>
-            </div>
-          </a>
+        <!-- Resume Section -->
+        <h2 id="Resume">RESUME</h2>
+        <div style="text-align: center; margin-top: 10px;">
+            <a href="Lola_Resume_March_2025__Website.pdf" download>
+                <span class="tag-cloud">Download Resume</span>
+            </a>
         </div>
-    
-    <!-- COLUMN 3 -->
-        <div class="portfolio_col">
-          <a href="fea-wing-des-page.html">
-            <div class="container">
-              <img src="project_photos\FEAWINGDES.jpg" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">FEA on Plane Wing using ANSYS Optislang</div>
-              </div>
-            </div>
-          </a>
-          <a href="print-making.html">
-            <div class="container">
-              <img src="project_photos\print_making\IMG_6790.jpg" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">Printmaking</div>
-              </div>
-            </div>
-          </a>
-          <a href="carbon-fiber-fuse.html">
-            <div class="container">
-              <img src="project_photos\fusemold2.png" alt="Avatar" class="image">
-              <div class="middle">
-                <div class="text">Carbon Fiber Fuselage Mold</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-<!-- To Add 
- -Spectrolite dupe
- -spacex page
- -? -->
+        <p style="text-align: center;">
+            <img src="resume.jpg" alt="Resume" style="width: var(--resume-width);">
+        </p>
+    </section>
 
-    
-    <!-- RESUME SECTION -->
-    <h2 id="Resume">RESUME</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="Lola_Resume_March_2025_Website.pdf" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Resume</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <p style="text-align: center;">
-        <img src="resume.jpg" alt="Resume" style="width:var(--resume-size);">
-      </p>
-    </div>
-    
-    
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/lola-anderson">
-        <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-      <a href="mailto:lra57@cornell.edu">
-        <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-      <p style="color: #95AAB6;">
-        2025 &copy by Lola Anderson
-      </p>
-    </div>
-    
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

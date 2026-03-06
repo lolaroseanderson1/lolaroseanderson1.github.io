@@ -1,130 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Color Separator for Risograph Printmaking - Matlab tool by Lola Anderson">
+    <title>Color Separator | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <div class="project-section">
-      <h1>Color Seperator for Risograph Printmaking</h1>
-      <div class="proj-header-image">
-        <img src="project_photos\color_seperator\color_seperator.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 1:</b> Result of color seperation with seafoam, flourescent pink, blue, and yellow riso inks</div>
-      </div>
-      <div class="proj-text"> 
-        A risograph machine is a type of digital printer used by artists. It uses a stencil-like process with an ink roller to print 
-        one layer of color at a time. This project was motivated because the software that art students use to seperate 
-        images into layers of different ink colors that the Risograph printer has available is only useable on mac.<br><br>
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>Color Seperator for Risograph Printmaking</h1>
+            <div class="proj-header-image">
+                <img src="project_photos/color_seperator/color_seperator.jpg"
+                     alt="Result of color separation with riso inks"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> Result of color seperation with seafoam, flourescent pink, blue, and yellow riso inks
+                </p>
+            </div>
+            <div class="proj-text">
+                A risograph machine is a type of digital printer used by artists. It uses a stencil-like process with an ink roller to print
+                one layer of color at a time. This project was motivated because the software that art students use to seperate
+                images into layers of different ink colors that the Risograph printer has available is only useable on mac.<br><br>
 
-        I wrote a Matlab script to separate images into a custom palette of pantone colors. Least squares estmation was used
-        to find a linear combination of the given colors’ RGB values that best approximates the image. 
-      </div>
-    </div>
+                I wrote a Matlab script to separate images into a custom palette of pantone colors. Least squares estmation was used
+                to find a linear combination of the given colors' RGB values that best approximates the image.
+            </div>
+        </section>
 
-
-      <div class="proj-row">
-        <div class="proj-column-two">
-          <img src="project_photos\color_seperator\hot_air_before.jpg"/>
+        <div class="proj-row">
+            <div class="proj-column-two">
+                <img src="project_photos/color_seperator/hot_air_before.jpg" alt="Original image before separation">
+            </div>
+            <div class="proj-column-two">
+                <img src="project_photos/color_seperator/hot_air_after.jpg" alt="Image after color separation">
+            </div>
         </div>
-        <div class="proj-column-two">
-          <img src="project_photos\color_seperator\hot_air_after.jpg"/>
+        <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+            <strong>Figure 2 and 3:</strong> Original image (left) and overlayed seperated image (right)
+        </p>
+
+        <div class="proj-text">
+            The image is not always perfectly replicated by this process unless the RBG values of the colors selected
+            are linearly independant. The image above is seperated into blue, fluorescent pink, and yellow. There are
+            also ink colors that are available for the risograph (riso) printer that are not
+            in the RGB color gamut. In these cases the closest RGB value is used instead. Different riso inks also have
+            different opacities which leads to unexpected outcomes.
         </div>
-      </div>
-      <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-        <b>Figure 2 and 3:</b> Original image (left) and overlayed seperated image (right)
-      </div>
-      <p><div class="proj-text">
-        The image is not always perfectly replicated by this process unless the RBG values of the colors selected 
-        are linearly independant. The image above is seperated into blue, fluorescent pink, and yellow. There are 
-        also ink colors that are available for the risograph (riso) printer that are not 
-        in the RGB color gamut. In these cases the closest RGB value is used instead. Different riso inks also have 
-        different opacities which leads to unexpected outcomes.
-    </div></p>
-    <div class="proj-header-image">
-        <img src="project_photos\color_seperator\riso_image.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 4:</b> Printed image using layer from color seperator</div>
-      </div>
-    </div>
 
+        <div class="proj-header-image">
+            <img src="project_photos/color_seperator/riso_image.jpg"
+                 alt="Printed risograph image"
+                 style="width: var(--project-image-size);">
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 4:</strong> Printed image using layer from color seperator
+            </p>
+        </div>
 
-    <!-- REPORT SECTION -->
-    <h2 id="Resume">Matlab</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="project_photos\color_seperator\Color_Seperator.m" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Matlab</span>
+        <!-- Download Section -->
+        <section class="project-section">
+            <h2>Matlab</h2>
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="project_photos/color_seperator/Color_Seperator.m" download>
+                    <span class="tag-cloud">Download Matlab</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <br><br>
-    </div>
-    
-    
-    <div class="footer">
-      <a href="https://www.linkedin.com/in/lola-anderson">
-        <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-      <a href="mailto:lra57@cornell.edu">
-        <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-      <p style="color: #95AAB6;">
-        2025 &copy by Lola Anderson
-      </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

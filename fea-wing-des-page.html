@@ -1,233 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Optimization and Finite Element Analysis of Wing Design project by Lola Anderson">
+    <title>FEA Wing Design | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <!-- TITLE -->
-    <div class="project-section">
-      <h1>Optimization and Finite Element Analysis of Wing Design</h1>
-      <div class="proj-header-image">
-        <img src="project_photos\FEAWINGDES.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 1:</b> Initial wing gometry modeled in Spaceclaim</div>
-      </div>
-      <div class="proj-text">This project involved designing and optimizing a 15 meter long 
-        aircraft wing made from 2024-T36 Aluminum to minimize weight using ANSYS. 
-        The geometry model contains the skin, spars, and ribs of the wing. Analysis was conducted assuming  
-        typical loading conditions in flight, that is, fixed to the fuselage and experiencing 
-        loads due to the weight of the structure as well as aerodynamic pressure.  The aerodynamic 
-        forces were simulated using a negative pressure on the top skin in ANSYS and a positive 
-        pressure on the bottom wing skin surface. These constraints were dictated by the assignment guidelines and roughly estimate 
-        the way a wing generates lift. <br><br>
-      </div>
-      <div class="proj-text">The design variables included the thicknesses 
-        of the major structural elements, as well as number, location, and shapes of  
-        spars and ribs. A minimum safety factor of 1.5 and maximum a tip deflection of 
-        0.375 m are also imposed.<br><br>
-      </div>
-      <h1>Approach and Outcome</h1>
-      <div class="proj-text">The first step in this project was to simulate the initial design given to us
-        with all surfaces being 10 cm thick. Each group memeber then split up design variables to explore. 
-        I looked into the impact of a nonstandard spar configuration, as well as the effect of changing 
-        the number and location of the ribs. I also explored some designs which included cut outs in 
-        the ribs and spars. We then looked at all of our results and recommend a design based on our 
-        exploration of these variables. Our initial baseline design had a mass of 
-        4840 kg and experienced a displacement of 0.683 m with a factor of safety of 
-        1.29. Our final design has a mass of 8050.4 kg, a displacement of 0.37156 m 
-        with a factor of safety of 1.81. We concluded that putting holes into the spars 
-        to minimize their role as major structural components was the best approach.
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>Optimization and Finite Element Analysis of Wing Design</h1>
+            <div class="proj-header-image">
+                <img src="project_photos/FEAWINGDES.jpg"
+                     alt="Initial wing geometry modeled in Spaceclaim"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> Initial wing geometry modeled in Spaceclaim
+                </p>
+            </div>
+            <div class="proj-text">
+                This project involved designing and optimizing a 15 meter long
+                aircraft wing made from 2024-T36 Aluminum to minimize weight using ANSYS.
+                The geometry model contains the skin, spars, and ribs of the wing. Analysis was conducted assuming
+                typical loading conditions in flight, that is, fixed to the fuselage and experiencing
+                loads due to the weight of the structure as well as aerodynamic pressure. The aerodynamic
+                forces were simulated using a negative pressure on the top skin in ANSYS and a positive
+                pressure on the bottom wing skin surface. These constraints were dictated by the assignment guidelines and roughly estimate
+                the way a wing generates lift.<br><br>
+            </div>
+            <div class="proj-text">
+                The design variables included the thicknesses
+                of the major structural elements, as well as number, location, and shapes of
+                spars and ribs. A minimum safety factor of 1.5 and maximum a tip deflection of
+                0.375 m are also imposed.<br><br>
+            </div>
 
-      </div>
-    </div>
-    <!-- SECTION -->
-    <div class="project-section">
-      <h3 style="font-size:27px;">Initial Baseline Design</h3>
-      <p>
-        <div class="proj-header-image">
-        <img src="project_photos\FEA_wing_design\initialdesign.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 2:</b> Equivalent Stress of baseline design</div>
-        </div>
-        <div class="proj-header-image">
-            <img src="project_photos\FEA_wing_design\table1.jpg"
-            style="width:var(--proj-image-size);">
-            <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-              <b>Table 1:</b> Parameters of Default Geometry</div>
-        </div>
-        <div class="proj-text"> The initial design failed to meet the success criteria 
-            defined. In order to determine 
-            whether our meshing was producing accurate results, we conducted a mesh convergence 
-            study in order to verify our results. We used automatic mesh refinement to dynamically 
-            adjust our mesh, our reasoning being that it could provide us more accurate results 
-            moving forward. As shown below, this generally increased mesh refinement at surface 
-            joints and the fixed end of the wing and along the length of the spars. These locations 
-            are extremely thin and have numerous sharp corners, which could lead to levels of stress 
-            in an extremely limited surface area.
-        </div>
-      <div class="proj-row">
-        <div class="proj-column-two">
-          <img src="project_photos\FEA_wing_design\conv1.jpg"/>
-        </div>
-        <div class="proj-column-two">
-          <img src="project_photos\FEA_wing_design\conv2.jpg"/>
-        </div>
-      </div>
-      <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-        <b>Figure 3 and 4:</b> Refined Mesh Convergence of Deformation (left) and an FBD of the simplified model gimbal (right)
-      </div>
-      <div class="proj-header-image">
-        <img src="project_photos\FEA_wing_design\refinedmesh.jpg"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 5:</b> Refined Mesh</div>
-      </div>
-      </p>
-    </div>
-  </div>
+            <h2>Approach and Outcome</h2>
+            <div class="proj-text">
+                The first step in this project was to simulate the initial design given to us
+                with all surfaces being 10 cm thick. Each group member then split up design variables to explore.
+                I looked into the impact of a nonstandard spar configuration, as well as the effect of changing
+                the number and location of the ribs. I also explored some designs which included cut outs in
+                the ribs and spars. We then looked at all of our results and recommend a design based on our
+                exploration of these variables. Our initial baseline design had a mass of
+                4840 kg and experienced a displacement of 0.683 m with a factor of safety of
+                1.29. Our final design has a mass of 8050.4 kg, a displacement of 0.37156 m
+                with a factor of safety of 1.81. We concluded that putting holes into the spars
+                to minimize their role as major structural components was the best approach.
+            </div>
+        </section>
 
-    <!-- SECTION 2 -->
-    <div class="project-section">
-        <h3 style="font-size:27px;">Four Rib Design</h3>
-        <p>
-          <div class="proj-header-image">
-          <img src="project_photos\FEA_wing_design\design4.jpg"
-          style="width:var(--proj-image-size);">
-          <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-            <b>Figure 6:</b> Equivalent Stress of four rib design</div>
-          </div>
-          <div class="proj-header-image">
-              <img src="project_photos\FEA_wing_design\table2.jpg"
-              style="width:var(--proj-image-size);">
-              <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-                <b>Table 2:</b> Parameters of four rib geometry</div>
-          </div>
-          <div class="proj-text"> For this model, I increased the number of ribs to four. 
-            This allowed us to 
-            isolate the impact of changing the number of ribs from the number in the 
-            default model. I ran OptiSlang in ANSYS to determine the optimal thicknesses for 
-            all of the surfaces that result in the lowest acceptable factor of safety and the 
-            highest acceptable value of deformation. This design iteration showed that 
-            increasing the number of ribs does not change the tip deflection significantly, 
-            and only ends up increasing the mass of the final design. By increasing the number 
-            of ribs, you might increase the number of locations where load is transferred to the 
-            spars in practice, which should lower the total bending moment on the spar, 
-            but in this model increasing the number ribs does not affect the load of the 
-            spar significantly, because the aerodynamic load is transferred to the spar by the skin 
-            itself. As a result of this analysis, I concluded that we should 
-            stick with the original number of ribs, or even decrease down to one rib.
-          </div>
-        </p>
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Initial Baseline Design</h3>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/initialdesign.jpg"
+                     alt="Equivalent Stress of baseline design"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 2:</strong> Equivalent Stress of baseline design
+                </p>
+            </div>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/table1.jpg"
+                     alt="Parameters of Default Geometry"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Table 1:</strong> Parameters of Default Geometry
+                </p>
+            </div>
+            <div class="proj-text">
+                The initial design failed to meet the success criteria
+                defined. In order to determine
+                whether our meshing was producing accurate results, we conducted a mesh convergence
+                study in order to verify our results. We used automatic mesh refinement to dynamically
+                adjust our mesh, our reasoning being that it could provide us more accurate results
+                moving forward. As shown below, this generally increased mesh refinement at surface
+                joints and the fixed end of the wing and along the length of the spars. These locations
+                are extremely thin and have numerous sharp corners, which could lead to levels of stress
+                in an extremely limited surface area.
+            </div>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/FEA_wing_design/conv1.jpg" alt="Mesh Convergence of Deformation">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/FEA_wing_design/conv2.jpg" alt="Mesh Convergence of Stress">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 3 and 4:</strong> Refined Mesh Convergence of Deformation (left) and Stress (right)
+            </p>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/refinedmesh.jpg"
+                     alt="Refined Mesh visualization"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 5:</strong> Refined Mesh
+                </p>
+            </div>
+        </section>
 
-<!-- SECTION 3 -->
-<div class="project-section">
-    <h3 style="font-size:27px;">Shorter Aft Spar Design</h3>
-    <p>
-      <div class="proj-header-image">
-      <img src="project_photos\FEA_wing_design\design5.jpg"
-      style="width:var(--proj-image-size);">
-      <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-        <b>Figure 7:</b> Equivalent Stress of short spar design</div>
-      </div>
-      <div class="proj-header-image">
-          <img src="project_photos\FEA_wing_design\table3.jpg"
-          style="width:var(--proj-image-size);">
-          <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-            <b>Table 3:</b> Parameters of short spar geometry</div>
-      </div>
-      <div class="proj-text"> For this model, I decreased the length of the aft spar to 
-        about 7.5 meters long. I theorized that this would be an effective way to reduce 
-        weight since the highest stresses are located at the base of the wing. I then ran 
-        OptiSlang to determine the optimal thicknesses for all of the surfaces. The parameters 
-        for the lightest design which passed all of our success criteria are shown in table 3. Based on 
-        this simulation, I recommended that the final design includes some version of 
-        shortened spars as this is an effective way to reduce weight while meeting success 
-        criteria.
-      </div>
-    </p>
-</div>
-</div>
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Four Rib Design</h3>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/design4.jpg"
+                     alt="Equivalent Stress of four rib design"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 6:</strong> Equivalent Stress of four rib design
+                </p>
+            </div>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/table2.jpg"
+                     alt="Parameters of four rib geometry"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Table 2:</strong> Parameters of four rib geometry
+                </p>
+            </div>
+            <div class="proj-text">
+                For this model, I increased the number of ribs to four.
+                This allowed us to
+                isolate the impact of changing the number of ribs from the number in the
+                default model. I ran OptiSlang in ANSYS to determine the optimal thicknesses for
+                all of the surfaces that result in the lowest acceptable factor of safety and the
+                highest acceptable value of deformation. This design iteration showed that
+                increasing the number of ribs does not change the tip deflection significantly,
+                and only ends up increasing the mass of the final design. By increasing the number
+                of ribs, you might increase the number of locations where load is transferred to the
+                spars in practice, which should lower the total bending moment on the spar,
+                but in this model increasing the number ribs does not affect the load of the
+                spar significantly, because the aerodynamic load is transferred to the spar by the skin
+                itself. As a result of this analysis, I concluded that we should
+                stick with the original number of ribs, or even decrease down to one rib.
+            </div>
+        </section>
 
-    <!-- REPORT SECTION -->
-    <h2 id="Resume">Report</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="project_photos\FEA_wing_design\MAE 4700 Project Report.pdf" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Report</span>
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Shorter Aft Spar Design</h3>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/design5.jpg"
+                     alt="Equivalent Stress of short spar design"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 7:</strong> Equivalent Stress of short spar design
+                </p>
+            </div>
+            <div class="proj-header-image">
+                <img src="project_photos/FEA_wing_design/table3.jpg"
+                     alt="Parameters of short spar geometry"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Table 3:</strong> Parameters of short spar geometry
+                </p>
+            </div>
+            <div class="proj-text">
+                For this model, I decreased the length of the aft spar to
+                about 7.5 meters long. I theorized that this would be an effective way to reduce
+                weight since the highest stresses are located at the base of the wing. I then ran
+                OptiSlang to determine the optimal thicknesses for all of the surfaces. The parameters
+                for the lightest design which passed all of our success criteria are shown in table 3. Based on
+                this simulation, I recommended that the final design includes some version of
+                shortened spars as this is an effective way to reduce weight while meeting success
+                criteria.
+            </div>
+        </section>
+
+        <!-- Report Section -->
+        <section class="project-section">
+            <h2>Report</h2>
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="project_photos/FEA_wing_design/MAE 4700 Project Report.pdf" download>
+                    <span class="tag-cloud">Download Report</span>
+                </a>
+            </div>
+            <object class="pdf"
+                    data="project_photos/FEA_wing_design/MAE 4700 Project Report.pdf"
+                    type="application/pdf"
+                    width="800"
+                    height="500">
+                <p>Unable to display PDF. <a href="project_photos/FEA_wing_design/MAE 4700 Project Report.pdf">Download</a> instead.</p>
+            </object>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <object class="pdf" 
-            data="project_photos\FEA_wing_design\MAE 4700 Project Report.pdf"
-            width="800"
-            height="500">
-    </object>
-    </div>
-    
-    <div class="footer">
-        <a href="https://www.linkedin.com/in/lola-anderson">
-          <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-        <a href="mailto:lra57@cornell.edu">
-          <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-        <p style="color: #95AAB6;">
-          2025 &copy by Lola Anderson
-        </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

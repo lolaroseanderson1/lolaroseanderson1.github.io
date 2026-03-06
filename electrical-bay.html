@@ -1,214 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Lola Anderson</title>
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Custom VTOL Aircraft Electrical Bay project by Lola Anderson">
+    <title>Electrical Bay | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!-- STICKY NAV BAR SECTION -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.htm" id="home-nav">Home</a>
-        <a href="#Projects" id="projects-nav">Projects</a>
-        <a href="#Skills" id="skills-nav">Skills</a>
-        <a href="#Resume" id="resume-nav">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
         </a>
         <div class="left">
-          <img id="toggle"
-          src="icons_and_such/icons8-light-mode-78.png" 
-          alt="Toggle" class="toggle-button"
-          onclick="toggleLightMode()" style="width: 45px;">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
         </div>
         <div class="center">Lola Anderson</div>
-    </div>
+    </nav>
 
-    <div class="project-section">
-      <h1>Custom VTOL Aircraft Electrical Bay</h1>
-      <div class="proj-header-image">
-        <img src="project_photos\ebay\DSC05755.JPG"
-        style="width:var(--proj-image-size);">
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-          <b>Figure 1:</b> Final installed electrical bay in use in the feild</div>
-      </div>
-      <div class="proj-text"> CU Air's Artemis Electrical Bay (ebay) serves the purpose 
-        of keeping batteries and electronics secure during flight. <br><br>
-
-        This project gave me experience with designing at the interface of multiple 
-        subteams. It presented the unique challenge of tailoring my design to the varying 
-        needs of multiple different groups within CU Air. The electrical subteam needed the 
-        components to be easily accessible. The autopilot subteam needed certain components 
-        such as the Pixhawk to be placed far from batteries to prevent interference. The 
-        mechanical teams needed the ebay to be lightweight and easy to work with when 
-        replacing batteries. As I worked through these problems I also adapted to the rapidly 
-        changing needs of the team, resulting in multple iterations shown below.</div>
-    </div>
-
-    <div class="project-section">
-      <h3 style="font-size:27px;">Final CAD Renders</h3>
-      <p>
-        <div class="proj-row">
-          <div class="proj-column-two">
-            <img src="project_photos\ebay\finalcad1.jpg"/>
-          </div>
-          <div class="proj-column-two">
-            <img src="project_photos\ebay\finalcad2.jpg"/>
-          </div>
-        </div>
-        <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-          <b>Figure 2 and 3:</b> A CAD model of the electrical bay with no boards or betteries (left) and with boards (right)
-        </div>
-    </div>
-    
-
-    <div class="project-section">
-      <h3 style="font-size:27px;">System Contents</h3>
-      <p>
-        <div class="proj-text" style="text-align: center;"> The ebay held the following components:
-          <div class="proj-row" style="text-align: left;">
-            <div class="proj-column-two"><ul>
-              <li>6x Flight Batteries (Tattu 6S 8000mAh) </li>
-              <li>Flight Electronics Battery</li>
-              <li>Pixhawk</li>
-              <li>Rocket</li>
-              <li>Raspberry Pi</li>
-              <li>Flight Validation Board</li>
-              <li>Gimbal Board</li>
-              <li>Power Monitoring System</li></ul> 
-            </div>
-            <div class="proj-column-two"><ul>
-              <li>R10C Current Sensing Board</li>
-              <li>Pixhawk Breakout Board</li>
-              <li>Power Distribution Board</li>
-              <li>Airdrop Board</li>
-              <li>Video Capture Board</li>
-              <li>General Development Board/Debug Board (for detecting issues before flight)</li>
-              </ul> 
-            </div>
-          </div>
-      </div>
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h3 style="font-size:27px;">System Requirements</h3>
-      <p>
-        <div class="proj-text">Fuctional Requirements:
-        <ul>
-          <li>FR-1: Must securely hold 6x 6S 8000 mAh batteries and 1x small batteries.</li>
-          <li>FR-2:  Must securely hold all 10 boards.</li>
-          <li>FR-3: Must provide adequate distance or insulation between the Pixhawk and batteries.</li>
-          <li>FR-4: Must provide consistently level mounting for the Pixhawk.</li>
-          <li>FR-5: Must separate necessary components to prevent battery interference.</li>
-          <li>FR-6: Must provide adequate ventilation.</li>
-          <li>FR-7: Must constrain the bulkhead vertically.</li>
-       </ul> 
-       Nonfuctional Requirements:
-        <ul>
-          <li>NFR-1: The Ebay shall be designed so that one person can exchange the batteries within 5 minutes (including plugging in and unplugging power wires)</li>
-          <li>NFR-2: The V4 Ebay mass shall not exceed V3 Mass.</li>
-          <li>NFR-3: The Ebay shall allow easy visibility for all electronic components so that members can validate their systems before flight.</li>
-          <li>NFR-4: The Ebay shall remain functional even in the case of a unexpected drop or a 360 degree roll.</li>
-       </ul> 
-      </div>
-      </p>
-
-      <div class="project-section">
-        <h3 style="font-size:27px;">Board Placement and Wire Management</h3>
-        <p>
-          <div class="proj-text">
-            <div class="proj-row">
-              <div class="proj-column-two">
-                <img src="project_photos\ebay\boards1.jpg"/>
-              </div>
-              <div class="proj-column-two">
-                <img src="project_photos\ebay\boards2.jpg"/>
-              </div>
-            </div>
-            <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
-              <b>Figure 4 and 5:</b> Annotated diagrams of Board Placements.
-            </div>
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>Custom VTOL Aircraft Electrical Bay</h1>
             <div class="proj-header-image">
-              <img src="project_photos\ebay\wirepaths.jpg"
-              style="width:var(--proj-image-size);">
-              <div class="proj-text" style="text-align: center; margin: 2px auto 10px auto;" >
-                <b>Figure 6:</b> Diagram of wire paths.</div>
-            </div> 
-            In the final design, the boards are mostly secured with screws to the wooden 
-            peice with the exception of the rocket. The wires to the rocket are too 
-            stiff to move freely, so the rocket is velcroed to the top of the fuselage. <br><br>
-            
-            The wires were diffiuclt to organize in such a small space, but the most important 
-            aspect for wire management was keeping the wires out of the batery section and 
-            out of the way of the airdrop and baydoors. This was accomplished by the wall 
-            towards the back of the fuselage. Power Wires were secured with velcro loops and 
-            zip ties if they had to cross into the airdrop area.
-        </div>
-        </p>
-      </div>
-    </div>
+                <img src="project_photos/ebay/DSC05755.JPG"
+                     alt="Final installed electrical bay in field use"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> Final installed electrical bay in use in the field
+                </p>
+            </div>
+            <div class="proj-text">
+                CU Air's Artemis Electrical Bay (ebay) serves the purpose
+                of keeping batteries and electronics secure during flight.<br><br>
 
+                This project gave me experience with designing at the interface of multiple
+                subteams. It presented the unique challenge of tailoring my design to the varying
+                needs of multiple different groups within CU Air. The electrical subteam needed the
+                components to be easily accessible. The autopilot subteam needed certain components
+                such as the Pixhawk to be placed far from batteries to prevent interference. The
+                mechanical teams needed the ebay to be lightweight and easy to work with when
+                replacing batteries. As I worked through these problems I also adapted to the rapidly
+                changing needs of the team, resulting in multple iterations shown below.
+            </div>
+        </section>
 
-    <!-- REPORT SECTION
-    <h2 id="Resume">Design Reviews</h2>
-      <div style="text-align:center; margin-top:10px;">
-        <a href="landerson-intermediate-dynamics-final-project.pdf" download>
-            <span class="tag-cloud" style= "margin-bottom: 10px">Download Report</span>
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Final CAD Renders</h3>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/ebay/finalcad1.jpg" alt="CAD model without boards or batteries">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/ebay/finalcad2.jpg" alt="CAD model with boards">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 2 and 3:</strong> A CAD model of the electrical bay with no boards or batteries (left) and with boards (right)
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">System Contents</h3>
+            <div class="proj-text" style="text-align: center;">
+                The ebay held the following components:
+                <div class="proj-row" style="text-align: left;">
+                    <div class="proj-column-two">
+                        <ul>
+                            <li>6x Flight Batteries (Tattu 6S 8000mAh)</li>
+                            <li>Flight Electronics Battery</li>
+                            <li>Pixhawk</li>
+                            <li>Rocket</li>
+                            <li>Raspberry Pi</li>
+                            <li>Flight Validation Board</li>
+                            <li>Gimbal Board</li>
+                            <li>Power Monitoring System</li>
+                        </ul>
+                    </div>
+                    <div class="proj-column-two">
+                        <ul>
+                            <li>R10C Current Sensing Board</li>
+                            <li>Pixhawk Breakout Board</li>
+                            <li>Power Distribution Board</li>
+                            <li>Airdrop Board</li>
+                            <li>Video Capture Board</li>
+                            <li>General Development Board/Debug Board (for detecting issues before flight)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">System Requirements</h3>
+            <div class="proj-text">
+                <strong>Functional Requirements:</strong>
+                <ul>
+                    <li>FR-1: Must securely hold 6x 6S 8000 mAh batteries and 1x small batteries.</li>
+                    <li>FR-2: Must securely hold all 10 boards.</li>
+                    <li>FR-3: Must provide adequate distance or insulation between the Pixhawk and batteries.</li>
+                    <li>FR-4: Must provide consistently level mounting for the Pixhawk.</li>
+                    <li>FR-5: Must separate necessary components to prevent battery interference.</li>
+                    <li>FR-6: Must provide adequate ventilation.</li>
+                    <li>FR-7: Must constrain the bulkhead vertically.</li>
+                </ul>
+                <strong>Non-Functional Requirements:</strong>
+                <ul>
+                    <li>NFR-1: The Ebay shall be designed so that one person can exchange the batteries within 5 minutes (including plugging in and unplugging power wires)</li>
+                    <li>NFR-2: The V4 Ebay mass shall not exceed V3 Mass.</li>
+                    <li>NFR-3: The Ebay shall allow easy visibility for all electronic components so that members can validate their systems before flight.</li>
+                    <li>NFR-4: The Ebay shall remain functional even in the case of a unexpected drop or a 360 degree roll.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h3 style="font-size: 27px;">Board Placement and Wire Management</h3>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/ebay/boards1.jpg" alt="Board placement diagram 1">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/ebay/boards2.jpg" alt="Board placement diagram 2">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 4 and 5:</strong> Annotated diagrams of Board Placements.
+            </p>
+
+            <div class="proj-header-image">
+                <img src="project_photos/ebay/wirepaths.jpg"
+                     alt="Wire path diagram"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 6:</strong> Diagram of wire paths.
+                </p>
+            </div>
+
+            <div class="proj-text">
+                In the final design, the boards are mostly secured with screws to the wooden
+                piece with the exception of the rocket. The wires to the rocket are too
+                stiff to move freely, so the rocket is velcroed to the top of the fuselage.<br><br>
+
+                The wires were difficult to organize in such a small space, but the most important
+                aspect for wire management was keeping the wires out of the battery section and
+                out of the way of the airdrop and baydoors. This was accomplished by the wall
+                towards the back of the fuselage. Power Wires were secured with velcro loops and
+                zip ties if they had to cross into the airdrop area.
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
         </a>
-      </div>
-      <object class="pdf" 
-            data="landerson-intermediate-dynamics-final-project.pdf"
-            width="800"
-            height="500">
-    </object>
-    </div>-->
-    
-    
-    <div class="footer">
-        <a href="https://www.linkedin.com/in/lola-anderson">
-          <i class="fa fa-linkedin fa-2x" style="color: #95AAB6; margin-right: 5%;"></i></a>
-        <a href="mailto:lra57@cornell.edu">
-          <i class="fa fa-envelope fa-2x" style="color: #95AAB6; margin-left: 5%;"></i></a></p>
-        <p style="color: #95AAB6;">
-          2025 &copy by Lola Anderson
-        </p>
-    </div>
-    
-    <script>
-        function toggleLightMode() {
-          var body = document.body;
-          var next = document.getElementById("next")
-          var tog = document.getElementById("toggle")
-          var abt = document.getElementById("abt")
-          if (body.classList.contains('light-mode')) 
-          { 
-            body.classList.remove('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-white.png";
-            tog.src="icons_and_such/icons8-light-mode-78.png";
-            tog.style="width: 45px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(71, 82, 136, 0.8);";
-    
-          } else {
-            body.classList.add('light-mode');
-            next.src="icons_and_such/icons8-chevron-down-black.png";
-            tog.src="icons_and_such/icons8-dark-mode-50.png";
-            tog.style="width: 35px;";
-            abt.style="font-weight: bold; text-align: center; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);";
-          };
-        }
-        function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-      </script>    
+        <a href="mailto:lra57@cornell.edu" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
