@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RF Scanner project by Lola Anderson">
+    <title>RF Scanner | Lola Anderson</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.htm">Home</a>
+        <a href="index.htm#Projects">Projects</a>
+        <a href="index.htm#Skills">Skills</a>
+        <a href="index.htm#Resume">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="left">
+            <img id="toggle"
+                 src="icons_and_such/icons8-light-mode-78.png"
+                 alt="Toggle theme"
+                 class="toggle-button"
+                 onclick="toggleLightMode()"
+                 width="45">
+        </div>
+        <div class="center">Lola Anderson</div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>RF Scanner</h1>
+            <div class="proj-header-image">
+                <img src="project_photos/RF_Scanner/scan_rig.jpeg"
+                     alt="Scanning stage with Vivaldi antenna and LiteVNA"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 1:</strong> The scanning stage, built from a repurposed 3D printer, with the antenna under test and a LiteVNA reading live S11 data
+                </p>
+            </div>
+            <div class="proj-text">
+                This is my first time ever working with RF. I had zero background going
+                in, so right now this page documents a project mainly aimed at learning.
+                The scanner sweeps an antenna over a grid in front of a target,
+                records the reflection coefficient (S11) at every point, and turns that data into
+                a 2D heatmap showing where the target reflects most strongly. Right now, it yeilds fuzzy images of 
+                a metal fan sitting on my workbench. As I refine the project more, the longer term 
+                goal for this project is to create a low cost medical grade scanner.<br><br>
+            </div>
+            <div class="proj-text">
+                These early results are a stepping stone toward higher frequencies and a better
+                scanner. What I'm actually working toward is a low cost
+                millimeter-wave reflectometry system for skin lesion screening, something you
+                could picture at a pharmacy or a kiosk as a quick screening tool, designed to inform users whether they should seek a clinical opinion. The plan is to first get this
+                scanner solid and prove it can image everyday materials and differentiate between things like drywall, plastic,
+                and metal, and then move toward finer resolution, wider bandwidth, and higher
+                frequencies from there.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>What's Built So Far</h2>
+            <div class="proj-text">
+                So far I've got a working scanning rig that combines a VNA, a repurposed
+                3D-printer motion stage, and some custom antenna mounts I designed. I also wrote
+                the automation and signal-processing pipeline in Python that turns the raw S11
+                sweeps into 2D spatial heatmaps. Next up I'm working toward 3D image
+                reconstruction and a custom PCB antenna.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Antenna Design</h2>
+            <div class="proj-text">
+                I started by using a vivaldi antenna purchased from amazon for my first pass on this project. 
+                After getting those results, I think that antenna may not be directional enough to get an accurate image. 
+                It is also huge and has to be far from the object in question, so I am designing a log periodic 
+                dipole array (LPDA) antenna, modeled and simulated in 4nec2. The 7 element
+                design reaches about 9.5 dBi of gain with an SWR under 1.3 across its band.
+                I am also designing a casing to minimize S11 reading fluctuation in reading caused by someone moving or walking around in the background during a scan.
+            </div>
+            <div class="proj-row">
+                <div class="proj-column-two">
+                    <img src="project_photos/RF_Scanner/4nec2_model1.png" alt="4nec2 LPDA model and radiation pattern">
+                </div>
+                <div class="proj-column-two">
+                    <img src="project_photos/RF_Scanner/4nec2_model2.png" alt="4nec2 LPDA 3D radiation pattern">
+                </div>
+            </div>
+            <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                <strong>Figure 2 and 3:</strong> LPDA geometry and simulated 3D gain pattern in 4nec2
+            </p>
+            <div class="proj-text">
+                The scanner is shown running a Vivaldi antenna right now, covering roughly
+                850 MHz to 6 GHz. I am prioritizing wide bandwidth antennas to allow me to scan across a wide range without switching antennas.
+                So far the beam isn't as directional as I'd like, so I'm currently trying out
+                other antenna designs to get a sharper, more directional result, and ideally
+                something with an even lower profile than what's mounted on the stage now.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Building the Scanning Stage</h2>
+            <div class="proj-header-image">
+                <img src="project_photos/RF_Scanner/veiw.jpeg"
+                     alt="Front view of the converted 3D printer scanning gantry"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 4:</strong> The converted gantry used to move the probe antenna in a controlled scan pattern
+                </p>
+            </div>
+            <div class="proj-text">
+                Instead of building a positioning system from scratch, I converted a used
+                Creality 3D printer into a motorized 2 axis scanning stage with custom antenna
+                mounts. The print head got swapped out for the probe antenna, and a coax cable
+                runs down from the antenna to the LiteVNA, which handles the actual RF
+                measurement and reports S11 back over its display and data connection. This gives me repeatable, programmable positioning without paying
+                for a dedicated scanning setup.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Grid Scan</h2>
+            <div class="proj-header-image">
+                <img src="project_photos/RF_Scanner/grid%20scan.png"
+                     alt="Scan grid overlaid on the target area"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 5:</strong> Scan grid overlaid on the target area
+                </p>
+            </div>
+            <div class="proj-text">
+                For the current data set, I scanned 441 points across a 15 cm by 15 cm grid,
+                sweeping a wide bandwidth from 1 to 6 GHz at every point. The target was just a
+                metal fan sitting in front of the scanner, mostly because it has a lot of
+                distinct geometric features that seemed like a good test for what the imaging
+                pipeline could recover.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Results So Far</h2>
+            <div class="proj-header-image">
+                <img src="project_photos/RF_Scanner/heat_map1.png"
+                     alt="Heat maps of S11 magnitude across the scan grid at various frequencies"
+                     style="width: var(--project-image-size);">
+                <p class="proj-text" style="text-align: center; margin: 2px auto 10px auto;">
+                    <strong>Figure 6:</strong> Heat maps of |S11| across the scan plane at the frequencies with the most spatial variation
+                </p>
+            </div>
+            <div class="proj-text">
+                The processing pipeline turns the raw sweeps into a heat map of reflection
+                magnitude across the scan plane for each frequency, and ranks the frequencies by
+                how much their S11 magnitude varies spatially so the most interesting ones are
+                easy to pick out. None of the resulting images look much like
+                the fan that was actually sitting in front of the scanner, everything is still
+                pretty fuzzy, but 4.9 GHz gets closest to matching its shape. Based on this, the antenna and imaging pipeline are on the right track, even though
+                resolution and directionality still need a lot of work.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Next Steps</h2>
+            <div class="proj-text">
+                In the near term, I'm trying out different antenna designs aimed at getting a
+                more directional beam and a lower profile, then I want to prove the scanner out
+                on a few different everyday materials (drywall, plastic, metal) before pushing
+                toward finer resolution, wider bandwidth, and higher frequencies. Further out,
+                I'm working toward 3D image reconstruction and a custom PCB antenna, both steps
+                on the way to the bigger goal: a low cost millimeter-wave reflectometry system
+                for skin lesion screening.
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Path to a Device</h2>
+            <div class="proj-text">
+                Alongside the hardware and signal processing work, I've also been looking into
+                what it would actually take to turn this into a real device. The goal here is a device meant
+                for pharmacy or kiosk-style screening, alternatively, a pilot study found that a 
+                device like this could be 98% accurate at diagnosing skin cancer, so longer term, 
+                this technology could help to reduce unneccessary biopsies and aid in clinical diagnosis. 
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Inspiration</h2>
+            <div class="proj-text">
+                This is the study that made me want to try this in the first place:<br><br>
+                Mirbeik-Sabzevari, A. &amp; Tavassolian, N. (2022). Millimeter-wave sensors for
+                high-accuracy discrimination of skin cancer. <em>Scientific Reports, 12.</em>
+                DOI: <a href="https://doi.org/10.1038/s41598-022-09047-6" target="_blank" rel="noopener noreferrer">10.1038/s41598-022-09047-6</a>.
+                Stevens Institute of Technology.
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/lola-anderson" aria-label="LinkedIn">
+            <i class="fa fa-linkedin fa-2x" style="margin-right: 5%;"></i>
+        </a>
+        <a href="mailto:lolaroseanderson1@gmail.com" aria-label="Email">
+            <i class="fa fa-envelope fa-2x" style="margin-left: 5%;"></i>
+        </a>
+        <p>2025 &copy; Lola Anderson</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
